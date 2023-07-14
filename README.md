@@ -101,6 +101,28 @@ cd my-project
 gem install
 ```
 
+### Get into development
+
+- create database and run migrations
+
+```sh
+bin/rails db:setup
+```
+
+- start server
+
+```sh
+bin/rails server
+```
+
+### Run test
+
+To run test, run the following command in the terminal
+
+```sh
+rspec
+```
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ### Deployment
