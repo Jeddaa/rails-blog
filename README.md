@@ -19,7 +19,7 @@
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
     - [Usage](#usage)
-    - [Deployment](#deployment)
+    <!-- - [Deployment](#deployment) -->
   - [👥 Authors ](#-authors-)
   <!-- - [🔭 Future Features ](#-future-features-) -->
   - [🤝 Contributing ](#-contributing-)
@@ -82,8 +82,15 @@ Example commands:
 ```sh
   cd my-folder
   git clone https://github.com/Jeddaa/rails-blog.git
+  bundle install
 ```
 --->
+
+### Install
+
+```
+git clone https://github.com/Jeddaa/rails-blog.git
+```
 
 ### Usage
 
@@ -94,12 +101,34 @@ cd my-project
 gem install
 ```
 
+### Get into development
+
+- create database and run migrations
+
+```sh
+bin/rails db:setup
+```
+
+- start server
+
+```sh
+bin/rails server
+```
+
+### Run test
+
+To run test, run the following command in the terminal
+
+```sh
+rspec
+```
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Deployment
+<!-- ### Deployment
 
 You can deploy this project using:
-GitHub Pages
+GitHub Pages -->
 
 <!--
 Example:
@@ -109,7 +138,7 @@ Example:
 ```
  -->
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 <!-- AUTHORS -->
 
