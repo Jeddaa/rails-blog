@@ -49,7 +49,8 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **Set up data models**
+- **Set up controller**
+<!-- - **Set up views** -->
 - **Set up Ruby linters**
 - **Ruby best practices and language style guides in code**
 
