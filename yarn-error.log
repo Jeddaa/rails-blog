@@ -1,0 +1,33 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.22.19/libexec/bin/yarn.js add tailwindcss
+
+PATH: 
+  /Users/fatiha/.gem/ruby/3.2.2/bin:/Users/fatiha/.rubies/ruby-3.2.2/lib/ruby/gems/3.2.0/bin:/Users/fatiha/.rubies/ruby-3.2.2/bin:/usr/local/opt/ruby/bin:/usr/local/bin:/usr/local/sbin:/Library/Frameworks/Python.framework/Versions/3.11/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Postgres.app/Contents/Versions/latest/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  18.16.1
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: EACCES: permission denied, mkdir '/Users/fatiha/microverse/module5/block1/rails-blog/node_modules/anymatch'
+
+npm manifest: 
+  {
+    "devDependencies": {
+      "stylelint": "^13.13.1",
+      "stylelint-config-standard": "^21.0.0",
+      "stylelint-csstree-validator": "^1.9.0",
+      "stylelint-scss": "^3.21.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
