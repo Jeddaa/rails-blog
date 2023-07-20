@@ -1,16 +1,14 @@
-<div>
-  <ul>
+<div  class = "border rounded border-black flex flex-col p-2 gap-3">
+  <ul  class = "flex flex-row p-2 gap-3 justify-between">
     <h1><%= @post.title%> by <%= @user.name%> </h1>
-    <div>
-      <p>Comments: <%= @post.comments_counter%>, Likes: <%= @post.likes_counter%></p>
-    </div>
+    <p>Comments: <%= @post.comments_counter%>, Likes: <%= @post.likes_counter%></p>
   </ul>
   <p> <%= @post.text %></p>
 </div>
-<div>
+<div  class = "border rounded border-black flex flex-col p-2 gap-3">
   <% @post.comments.each do |comment| %>
     <div>
-      <p><%=@post.user.name %>: <%= comment.text%></p>
+      <p><%=comment.author.name %>: <%= comment.text%></p>
     </div>
   <% end %>
 </div>

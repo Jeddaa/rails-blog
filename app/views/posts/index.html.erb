@@ -1,26 +1,29 @@
 <% if @posts.blank? %>
-  <p>There are no post for this user yet.</p>
+  <h2>There are no post for this user yet.</h2>
 <% else %>
-  <div>
-    <h1><%= @user.name%></h1>
-    <p>Number of posts: <%= @user.posts_counter %></p>
+  <div class="flex flex-row py-5 gap-5">
+    <div class="border border-black w-1/6 h-20"></div>
+    <div class = "border rounded border-black flex flex-row p-3 justify-between w-5/6">
+      <h1><%= @user.name%></h1>
+      <p>Number of posts: <%= @user.posts_counter %></p>
+    </div>
   </div>
   <% @posts.each_with_index do |post, index| %>
     <div>
-      <div>
-        <h3><%= link_to "Post ##{index +1}", user_post_path(@user, post) %></h1>
+      <div class = "border rounded border-black flex flex-col p-2 gap-3">
+        <h3 class = "p-0 hover:bg-blue-700"><%= link_to "Post ##{index +1}", user_post_path(@user, post) %></h1>
         <p><%= post.title %></p>
         <p><%= post.text %></p>
         <p> Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %> </p>
       </div>
-      <div>
-        <% post.comments.each do |comment| %>
-          <div>
-            <p><%= post.user.name%>:<%= comment.text %></p>
+      <div class = "border rounded border-black flex flex-col p-2 gap-3">
+        <% post.comments.each do | comment| %>
+          <div >
+            <p><%= comment.author.name%>:<%= comment.text %></p>
           </div>
         <% end %>
       </div>
     </div>
   <% end %>
-  <button>Pagination</button>
+  <button class = "border rounded border-black p-2 my-4">Pagination</button>
 <% end %>

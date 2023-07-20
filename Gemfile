@@ -78,3 +78,8 @@ group :development, :test do
 end
 
 gem 'rails-controller-testing'
+
+# gem 'sassc'
+
+
+gem "tailwindcss-rails", "~> 2.0"
