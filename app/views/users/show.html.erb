@@ -1,1 +1,23 @@
-<h1>The details of a given user</h1>
+<div>
+  <h1><%= @user.name %></h1>
+  <p>Number of posts: <%= @user.posts_counter %></p>
+</div>
+<div>
+  <h2>Bio</h2>
+  <p><%= @user.bio %></p>
+</div>
+<% if @user.recent_posts.blank? %>
+  <p>There are no posts for this user yet.</p>
+<%else%>
+  <div>
+    <% @user.recent_posts.each_with_index do |post, index| %>
+        <div>
+          <%= link_to "Post ##{index +1}", user_posts_path(@user) %>
+          <p><%= post.text %></p>
+          <p>Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %></p>
+        </div>
+    <% end %>
+  </div>
+  <button>See all posts</button>
+<% end %>
+

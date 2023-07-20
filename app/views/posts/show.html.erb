@@ -1,1 +1,16 @@
-<h1>The details of a particular post for a given user</h1>
+<div>
+  <ul>
+    <h1><%= @post.title%> by <%= @user.name%> </h1>
+    <div>
+      <p>Comments: <%= @post.comments_counter%>, Likes: <%= @post.likes_counter%></p>
+    </div>
+  </ul>
+  <p> <%= @post.text %></p>
+</div>
+<div>
+  <% @post.comments.each do |comment| %>
+    <div>
+      <p><%=@post.user.name %>: <%= comment.text%></p>
+    </div>
+  <% end %>
+</div>

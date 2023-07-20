@@ -1,1 +1,26 @@
-<h1>Here are the list of all posts for a given user</h1>
+<% if @posts.blank? %>
+  <p>There are no post for this user yet.</p>
+<% else %>
+  <div>
+    <h1><%= @user.name%></h1>
+    <p>Number of posts: <%= @user.posts_counter %></p>
+  </div>
+  <% @posts.each_with_index do |post, index| %>
+    <div>
+      <div>
+        <h3><%= link_to "Post ##{index +1}", user_post_path(@user, post) %></h1>
+        <p><%= post.title %></p>
+        <p><%= post.text %></p>
+        <p> Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %> </p>
+      </div>
+      <div>
+        <% post.comments.each do |comment| %>
+          <div>
+            <p><%= post.user.name%>:<%= comment.text %></p>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+  <button>Pagination</button>
+<% end %>
