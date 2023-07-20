@@ -21,7 +21,7 @@
     - [Usage](#usage)
     <!-- - [Deployment](#deployment) -->
   - [👥 Authors ](#-authors-)
-  <!-- - [🔭 Future Features ](#-future-features-) -->
+  - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
   - [⭐️ Show your support ](#️-show-your-support-)
   - [🙏 Acknowledgments ](#-acknowledgments-)
@@ -49,8 +49,9 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **Set up controller**
-<!-- - **Set up views** -->
+<!-- - **Set up controller** -->
+
+- **Set up views**
 - **Set up Ruby linters**
 - **Ruby best practices and language style guides in code**
 
@@ -156,9 +157,10 @@ Example:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Set up views**
 - **Set up forms**
 - **Implement the ui**
+- **Implement the login**
+- **Implement the authentication**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

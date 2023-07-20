@@ -8,16 +8,6 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find_by(id:params[:id])
+    @post = Post.find_by(id: params[:id])
   end
-
-  # private
-
-  # def set_user
-  #   @user = User.find(params[:user_id])
-  # end
-
-  # def get_comments
-  #   @comments = Comment.where(post_id: params[:id])
-  # end
 end
