@@ -26,4 +26,5 @@
     </div>
   <% end %>
   <button class = "border rounded border-black p-2 my-4">Pagination</button>
+  <button class = "border rounded border-black p-2 my-4"><%= link_to 'Create new post', new_post_path(user_id: @user.id)%></button>
 <% end %>
