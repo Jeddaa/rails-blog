@@ -1,0 +1,10 @@
+<div class="flex flex-col">
+  <%= form_with(model: @comment, url: create_comment_path(post_id: post.id, user_id: user.id), local: true )  do |form| %>
+
+
+    <%= form.label :text %>
+    <%= form.text_field :text %>
+
+    <%= form.submit "Create Comment" %>
+    <% end %>
+</div

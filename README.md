@@ -51,7 +51,9 @@
 
 <!-- - **Set up controller** -->
 
-- **Set up views**
+- **Allow user to add comments**
+- **Allow user to add likes**
+- **Show all comments and likes**
 - **Set up Ruby linters**
 - **Ruby best practices and language style guides in code**
 
@@ -157,7 +159,7 @@ Example:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Set up forms**
+- **Modify up forms**
 - **Implement the ui**
 - **Implement the login**
 - **Implement the authentication**

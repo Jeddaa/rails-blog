@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_current_user, only: [:new, :create]
+  before_action :set_current_user, only: %i[new create]
 
   def index
     @posts = Post.where(author_id: params[:user_id])
@@ -15,7 +15,7 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
-    # @post.author_id = current_user.id
+  # @post.author_id = current_user.id
 
   def create
     @post = @current_user.posts.build(post_params)
@@ -36,7 +36,6 @@ class PostsController < ApplicationController
 
   def set_current_user
     @current_user = current_user
-    @user = current_user
+    # @user = current_user
   end
-
 end
