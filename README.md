@@ -51,9 +51,11 @@
 
 <!-- - **Set up controller** -->
 
-- **Allow user to add comments**
+<!-- - **Allow user to add comments**
 - **Allow user to add likes**
-- **Show all comments and likes**
+- **Show all comments and likes** -->
+
+- **Testing for the views**
 - **Set up Ruby linters**
 - **Ruby best practices and language style guides in code**
 
