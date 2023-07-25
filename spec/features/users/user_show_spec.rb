@@ -41,9 +41,9 @@ RSpec.describe 'User', type: :feature do
       expect(page).to have_content(@user1.bio)
     end
     it 'I can see the user first 3 posts.' do
-      expect(page).to have_content(@post1.title)
+      expect(page).to have_content(@post1.text)
       expect(page).to have_content(@post2.text)
-      expect(page).to have_content(@post3.title)
+      expect(page).to have_content(@post3.text)
       expect(page).to_not have_content('Total number of posts: 4')
     end
     it 'should see a button that lets me view all of a user\'s posts' do
@@ -58,5 +58,4 @@ RSpec.describe 'User', type: :feature do
       expect(page).to have_current_path('/users')
     end
   end
-
 end
