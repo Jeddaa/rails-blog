@@ -1,6 +1,4 @@
-<% if @posts.blank? %>
-  <h2>There are no post for this user yet.</h2>
-<% else %>
+
   <div class="flex flex-row py-5 gap-5">
     <div class="border border-black w-1/6 h-20">
         <img src=<%= @user.photo %> alt="profile">
@@ -29,4 +27,4 @@
   <% end %>
   <button class = "border rounded border-black p-2 my-4">Pagination</button>
   <button class = "border rounded border-black p-2 my-4"><%= link_to 'Create new post', new_user_post_path%></button>
-<% end %>
+
