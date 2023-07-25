@@ -1,6 +1,6 @@
 <div class="flex flex-row py-5 gap-5">
   <div class="border border-black w-1/6 h-20">
-        <img src=<%= @user.photo %> alt="profile">
+        <img src=<%= @user.photo %> alt="trial">
   </div>
   <div class = "border rounded border-black flex flex-row p-3 justify-between w-5/6">
     <h1><%= @user.name %></h1>
@@ -11,9 +11,7 @@
   <p>Bio</p>
   <p><%= @user.bio %></p>
 </div>
-<% if @user.recent_posts.blank? %>
-  <h2>There are no posts for this user yet.</h2>
-<%else%>
+
   <div>
     <% @user.recent_posts.each_with_index do |post, index| %>
         <div class="border rounded border-black flex flex-col mt-3 p-3 gap-5">
@@ -23,6 +21,7 @@
         </div>
     <% end %>
   </div>
+  <button class = "border rounded border-black p-2 my-4"><%= link_to 'Create new post', new_user_post_path(@user)%></button>
   <button class = "border rounded border-black my-4"> <%=link_to 'See all posts', users_path%></button>
-<% end %>
+
 

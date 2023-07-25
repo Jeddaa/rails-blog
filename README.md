@@ -55,7 +55,7 @@
 - **Allow user to add likes**
 - **Show all comments and likes** -->
 
-- **Testing for the views**
+- **Setting up devise**
 - **Set up Ruby linters**
 - **Ruby best practices and language style guides in code**
 
@@ -161,9 +161,8 @@ Example:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Modify up forms**
 - **Implement the ui**
-- **Implement the login**
+- **Modify the login process**
 - **Implement the authentication**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
