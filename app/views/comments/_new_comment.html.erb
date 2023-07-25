@@ -1,5 +1,5 @@
 <div class="flex flex-col">
-  <%= form_with(model: @comment, url: create_comment_path(post_id: post.id, user_id: user.id), local: true )  do |form| %>
+  <%= form_with(model: @comment, url: user_post_comments_path(post_id: @post.id, user_id: @user.id), local: true )  do |form| %>
 
 
     <%= form.label :text %>

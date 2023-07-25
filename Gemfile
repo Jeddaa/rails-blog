@@ -68,13 +68,25 @@ end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-  gem 'capybara'
+
+  # Capybara, the library that allows us to interact with the browser using Ruby
+  # gem 'capybara'
   gem 'selenium-webdriver'
-  gem 'webdrivers'
+
+  # The following gems aids with the nuts and bolts
+  # of interacting with the browser.
+  # gem 'webdrivers'
 end
 
 group :development, :test do
   gem 'rspec-rails', '~> 5.0'
+
+  # Capybara, the library that allows us to interact with the browser using Ruby
+  gem 'capybara'
+
+  # The following gems aids with the nuts and bolts
+  # of interacting with the browser.
+  gem 'webdrivers'
 end
 
 gem 'rails-controller-testing'
