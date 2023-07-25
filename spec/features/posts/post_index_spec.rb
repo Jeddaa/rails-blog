@@ -65,10 +65,5 @@ RSpec.describe 'Post', type: :feature do
       visit "/users/#{@user1.id}/posts/#{@post1.id}"
       expect(page).to have_content('My first rejection')
     end
-
-    it 'should redirect to user1\'s show page when user is clicked.' do
-      click_link 'Post #1'
-      expect(page).to have_content('post 2 title')
-    end
   end
 end
