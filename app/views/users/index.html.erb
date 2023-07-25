@@ -1,5 +1,9 @@
 <% if @users.blank? %>
   <p>There are no users yet.</p>
+  <button class= "rounded border-2 p-2 mt-4">
+    <%= link_to "Sign In", new_user_session_path %>
+  </button>
+
 <%else%>
   <ul class="flex flex-col p-5">
   <% @users.each do |user| %>
