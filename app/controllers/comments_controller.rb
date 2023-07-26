@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
-  before_action :set_current_user, only: %i[new create]
+  before_action :authenticate_user!, except: %i[index show]
+
   def new
     @post = Post.find(params[:post_id])
     @comment = Comment.new
@@ -15,6 +16,14 @@ class CommentsController < ApplicationController
     else
       render 'posts#show'
     end
+  end
+
+  def destroy
+    @post = Post.find(params[:id])
+    @comment = Comment.find(params[:id])
+    @comment.destroy
+
+    redirect_to user_post_path(@post), notice: 'Comment was successfully deleted.'
   end
 
   private

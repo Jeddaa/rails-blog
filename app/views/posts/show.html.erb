@@ -1,6 +1,6 @@
 <div  class = "border rounded border-black flex flex-col p-2 gap-3">
   <ul  class = "flex flex-row p-2 gap-3 justify-between">
-    <h1><%= @post.title%> by <%= @user.name%> </h1>
+    <h1><%= @post.title%> by <%= @post.author%> </h1>
     <p>Comments: <%= @post.comments_counter%>, Likes: <%= @post.likes_counter%></p>
   </ul>
   <p> <%= @post.text %></p>
@@ -10,11 +10,20 @@
     <div>
       <p><%=comment.author.name %>: <%=comment.text %></p>
     </div>
+    <% if can? :destroy, @post %>
+      <%= button_to 'Delete Comment', user_post_comment_path(@post, comment), method: :delete, data: { confirm: 'Are you sure you want to delete this comment?' } %>
+    <% end %>
   <% end %>
 </div>
+<% if can? :destroy, @post %>
+  <%= button_to 'Delete Post', user_post_path(@user, @post), method: :delete, data: { confirm: 'Are you sure you want to delete this post?' } %>
+<% end %>
 <div class = "border rounded border-black flex flex-col p-2 gap-3">
     <%= render partial: 'comments/new_comment', locals: { post: @post, user: @user, user_id: params[:user_id] } %>
 </div>
 <div  class = "border rounded border-black flex flex-col p-2 gap-3">
   <%= render partial: 'likes/new_like', locals: { post: @post, user: @user, user_id: params[:user_id] } %>
 </div
+
+
+
