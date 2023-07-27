@@ -1,5 +1,5 @@
 class LikesController < ApplicationController
-  before_action :set_current_user, only: %i[new create]
+  before_action :authenticate_user!, except: %i[index show]
 
   def new
     @like = Like.new
