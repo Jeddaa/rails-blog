@@ -98,3 +98,5 @@ gem 'tailwindcss-rails', '~> 2.0'
 gem 'devise'
 
 gem 'cancancan', '~> 1.9'
+
+gem 'rswag'
