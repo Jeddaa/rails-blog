@@ -17,7 +17,7 @@
         <p> Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %> </p>
       </div>
       <div class = "border rounded border-black flex flex-col p-2 gap-3">
-        <% post.comments.includes(:author).limit(3).each do | comment| %>
+        <% post.recent_comments.each do | comment| %>
           <div >
             <p><%= comment.author.name%>:<%= comment.text %></p>
           </div>

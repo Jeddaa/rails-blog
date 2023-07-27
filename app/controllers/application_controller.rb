@@ -11,4 +11,8 @@ class ApplicationController < ActionController::Base
       u.permit(:name, :surname, :email, :password, :current_password)
     end
   end
+  # this is for when we had to create the current_user method in the application controller
+  # def current_user
+  #   @current_user = User.first
+  # end
 end
