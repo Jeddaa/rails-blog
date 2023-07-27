@@ -2,7 +2,7 @@ class Api::CommentsController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   def index
-    # @user = User.find(params[:user_id])
+    @user = User.find(params[:user_id])
     # @user =current_user
     @post = @user.posts.find(params[:post_id])
     @comments = @post.comments
