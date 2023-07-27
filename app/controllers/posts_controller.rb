@@ -1,14 +1,18 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, except: %i[index show]
+  # load_and_authorize_resource
+  # before_action :set_current_user
+
 
   def index
     @user = User.find(params[:user_id])
-    @posts = @user.posts.includes(:comments)
+    @posts = @user.posts.includes(:author, comments: :author)
   end
 
   def show
     @post = Post.find_by(id: params[:id])
-    @user = current_user
+    # @user = current_user
+    @user = User.find(params[:user_id])
   end
 
   def new
@@ -16,11 +20,15 @@ class PostsController < ApplicationController
   end
 
   def create
-    @user = current_user
+    # this is for when we had the current_user method in the application controller
+    # or when the confirmable has been correctly setup so the current_user will have a value
+    # @user = current_user
+
+    @user = User.find(params[:user_id])
     @post = @user.posts.new(post_params)
 
     if @post.save
-      redirect_to user_post_path(@current_user, @post), notice: 'Post was successfully created.'
+      redirect_to user_post_path(@user, @post), notice: 'Post was successfully created.'
     else
       render :new
     end
@@ -42,7 +50,7 @@ class PostsController < ApplicationController
     params.require(:post).permit(:title, :text)
   end
 
-  def set_current_user
-    @current_user = current_user
-  end
+  # def set_current_user
+  #   @current_user = current_user
+  # end
 end
