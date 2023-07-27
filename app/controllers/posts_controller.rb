@@ -3,7 +3,6 @@ class PostsController < ApplicationController
   # load_and_authorize_resource
   # before_action :set_current_user
 
-
   def index
     @user = User.find(params[:user_id])
     @posts = @user.posts.includes(:author, comments: :author)
